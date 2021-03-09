@@ -334,7 +334,7 @@ final class Factory
 		if (!class_exists(ParserFactory::class)) {
 			throw new Nette\NotSupportedException("PHP-Parser is required to load method bodies, install package 'nikic/php-parser'.");
 		} elseif (!$file) {
-			throw new Nette\InvalidStateException("Source code of $from->name not found.");
+			throw new Nette\InvalidStateException("Source code of {$from->name} not found.");
 		}
 
 		$lexer = new PhpParser\Lexer(['usedAttributes' => ['startFilePos', 'endFilePos']]);
